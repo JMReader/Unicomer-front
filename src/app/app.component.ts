@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,4 @@ import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'Unicomer';
-  faKeyboard = faKeyboard;
 }
