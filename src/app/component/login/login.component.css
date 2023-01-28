@@ -3,15 +3,24 @@ main{
     display: flex;
     height: 100vh;
     background-image: url(https://img.freepik.com/free-vector/abstract-techno-banner-with-hexagonal-design_1048-13087.jpg?w=1380&t=st=1674911518~exp=1674912118~hmac=89a9ed52725190b166a7287a361e7dd607479c84abac8335364d7120d2a351b4);
+    background-clip: initial;
+    background-size: cover;
 }
 h3 b {
     color: #164c79;
 }
 .cont{
+    position: relative;
     background-color: #164d79e3;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
+.register{
+    position: absolute;
+    bottom: 0;
+}
 
 #bienvenidos{
     
@@ -41,10 +50,47 @@ h3 b {
     color: black;
     border: none;
     border-radius: .5rem;
-    transition: all 0.2s;
+    
 }
-.btn-log:active{
+.btn-log:active , .numberpad button:active{
+    transition: all 0.2s;
     background-color: #6B98BF;
+}
+.keyboard:hover, #cerrar{
+    cursor: crosshair
+}
+#teclado{
+    position: absolute;
+    bottom: 5px;
+}
+#cerrar{
+    padding: 3.5px;
+    border-radius: .5rem;
+    background-color: #cf3d4e;
+}
+.numberpad{
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 65px);
+    grid-template-rows: repeat(4, 65px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #1f4363e5;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+
+}
+.numberpad div, .numberpad button{
+    border: 3px solid #1f4363;;
+    font-size: x-large;
+    background-color: azure;
+ text-align: center;
+ width: 60px;
+ height: 60px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
