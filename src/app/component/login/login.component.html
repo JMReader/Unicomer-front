@@ -10,7 +10,7 @@
 
             <div class="form-outline mb-4 col-8">
                 <label class="form-label" for="TipoDNI">Tipo dodumento</label>
-                <input autocomplete="none" type="number" id="TipoDNI" class=" form-control form-control-lg forminp" />
+                <input autocomplete="none" type="number" id="TipoDNI" class=" form-control form-control-lg forminp" ng-virtual-keyboard />
             </div>
             
 
@@ -33,5 +33,9 @@
             
           </form>
           <p>No tenes cuenta <a href="#!" class="link-info">Registrate aqui</a></p>
+          <fa-icon [icon]="faKeyboard"></fa-icon> Teclado virtual
+          <p></p>
     </div>
 </main>
+<input (input)="onInputChange($event)" class="input" value={{value}} placeholder="Tap on the virtual keyboard to start" />
+<div class="simple-keyboard"></div>
