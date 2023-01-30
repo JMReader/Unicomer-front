@@ -1,102 +1,45 @@
-<div class="cont col-12" >
-  <app-sidebar class=" col-lg-2 d-none d-bg-flex d-lg-flex" ></app-sidebar>
-  <main class="col-12 col-lg-10 col-md-12">
-    <nav class="navbar my-2">
-      <form class=" col-lg-1 col-sm-2 form-inline d-flex navbar-frm">
-        <input
-          class="form-control mr-sm-2 mx-2"
-          type="search"
-          placeholder="busca aquí"
-          aria-label="Search"
-        />
-      </form>
-      <div class="navbar-options col-sm-6 col-lg-3">
-        <i class="fa-solid fa-bell navbar-option mx-1"></i>
-        <i class="fa-solid fa-gear navbar-option mx-1 "></i>
-        <div class="d-flex ImgUser mx-1">
-          <img
-            class="user"
-            src="https://aishlatino.com/wp-content/uploads/2021/11/que-tipo-de-persona-te-gustaria-ser-730x411-SP.jpg"
-            height="20"
-            alt=""
-          />
-          <b class="mx-3 aaaa" style="color: #b6b9f2">{{userName}}</b>
-        </div>
-      </div>
-    </nav>
-    <div  class="tarjetas col-12">
-      <div *ngFor="let tarjeta of tarjetas" class="tarjeta mx-4 py-4 px-3">
-        <div class="tarjeta-top">
-          <div class="tarjeta-monto">
-            Mi saldo: <br />
-            <b>${{ tarjeta.saldo }}</b>
-          </div>
-          <div class="tarjeta-banco">
-            <img
-              class="tarjeta-logo"
-              src="https://www.seekpng.com/png/full/245-2453815_mastercard-logo-png-transparent-mastercard-icons-black-and.png"
-              height="40px"
-              alt=""
-            />
-            <div class="tarjeta-banco">
-              <b>{{ tarjeta.banco }}</b>
+<div class="cont" style="height: 100vh;">
+    <app-sidebar></app-sidebar>
+    <main>
+        <nav class="navbar my-2">
+            <form class="form-inline d-flex navbar-frm">
+              <input class="form-control mr-sm-2 mx-2" type="search" placeholder="busca aquí" aria-label="Search">
+              
+            </form>
+            <div class="navbar-options">
+                <i class="fa-solid fa-bell navbar-option"></i>
+                <i class="fa-solid fa-gear navbar-option"></i>
+                <div class="d-flex ImgUser">
+                    <img class="user" src="https://aishlatino.com/wp-content/uploads/2021/11/que-tipo-de-persona-te-gustaria-ser-730x411-SP.jpg" height="20" alt="">    
+                    <b class="mx-3" style="color: #B6B9F2;">Nombre</b>
+                </div>
+
             </div>
-          </div>
+            </nav>
+        <div class="tarjetas">
+            <div class="tarjeta mx-4 py-4 px-3">
+                <div class="tarjeta-top">
+                    <div class="tarjeta-monto"> Mi saldo: <br> <b>$8500</b> </div>
+                    <div class="tarjeta-banco">
+                        <img class="tarjeta-logo" src="https://upload.wikimedia.org/wikipedia/commons/7/72/MasterCard_early_1990s_logo.png" height="40px" alt="">
+                        <div class="tarjeta-banco"><b>Brubank</b> </div>
+                    </div>
+                    
+                </div>
+                <div class="tarjeta-med" >
+                <div class="tarjeta-numeros"> <b> 4888 **** **** 4444 </b></div>
+            </div>
+                <div class="tarjeta-botomm">
+                    <div class="propietario">titular <br> <b>Coro juan</b>   </div>
+                    <div class="vencimiento"> vencimiento <br> <b>11/27</b> </div>
+                
+                    
+                    
+                    
+                </div>
+               
+            </div>
         </div>
-        <div class="tarjeta-med">
-          <div class="tarjeta-numeros">
-            <b> {{ tarjeta.Numeros }} </b>
-          </div>
-        </div>
-        <div class="tarjeta-botomm">
-          <div class="propietario">
-            titular <br />
-            <b>{{tarjeta.NombreTitular}}</b>
-          </div>
-          <div class="vencimiento">
-            vencimiento <br />
-            <b>{{ tarjeta.vencimiento }}</b>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mid-page">
-      <div class="balance col-5">
-        a
-      </div>
-      <div class="table-responsive-md  transacciones col-md-9 col-sm-9 col-lg-5 py-2 m-2">
-        <p class="h5 px-2">Ultimas Transacciones</p>
-        <div class="table-responsive-md">
-        <table class=" table table-striped-columns">
-          <tbody>
-            <tr *ngFor="let trans of TransEnviadas">
-              <td class="table-tipo">
-                <i class="fa-solid fa-arrow-turn-up flecha"></i>
-              </td>
-              <td class="table-de">Facundo Molina</td>
-              <td class="monto">${{trans.monto}}</td>
-              <td class="fecha">{{trans.fecha}}</td>
-              <td class="table-estado">{{trans.estado}}</td>
-              <td class="table-opciones">
-                <i class="fa-solid fa-gears"></i>
-              </td>
-            </tr>
-            <tr *ngFor="let trans of TransRecibidas">
-              <td class="table-tipo">
-                <i class="fa-solid fa-arrow-turn-down"></i>
-              </td>
-              <td class="table-de">Facundo Molina</td>
-              <td class="monto">${{trans.monto}}</td>
-              <td class="fecha">{{trans.fecha}}</td>
-              <td  class="table-estado">{{trans.estado}}</td>
-              <td class="table-opciones">
-                <i class="fa-solid fa-gears"></i>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      </div>
-    </div>
-  </main>
+
+    </main>
 </div>

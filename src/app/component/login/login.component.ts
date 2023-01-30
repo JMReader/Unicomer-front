@@ -140,7 +140,6 @@ export class LoginComponent implements OnInit {
         console.log("a");
       sessionStorage.setItem("_id", user._id);
       sessionStorage.setItem("dni", user.dni);
-      sessionStorage.setItem("nombre", user.nombre);
       this.router.navigateByUrl('home');
     }else{
       this.badcredentials=true;

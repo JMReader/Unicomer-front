@@ -114,8 +114,5 @@
       }
     }
   },
-  "defaultProject": "Unicomer",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "Unicomer"
 }
