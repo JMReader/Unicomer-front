@@ -19,7 +19,9 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
     this.service.obtenerMenu().subscribe(
       (result)=>{
-        this.opcioness=result.menu.opciones;
+        console.log(result.msg[0].opciones);
+   
+        this.opcioness=result.msg[0].opciones;
       }
     )
   }

@@ -31,7 +31,7 @@ export class LoginService {
         'Content-Type': 'application/json'
       })
     }   
-    return this._http.get("http://localhost:3000/menu/completo?idMenu=63d79705358afad26abafe69", httpOption);
+    return this._http.get("http://localhost:3000/menu/completo", httpOption);
   }
   public userLogged() {
     console.log("usuario");
