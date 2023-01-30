@@ -64,16 +64,16 @@ main{
     position: relative;
     background-color: #000000;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect fill='none' stroke-width='100' id='a' x='-400' y='-300' width='800' height='600'/%3E%3C/defs%3E%3Cg style='transform-origin:center'%3E%3Cg transform='rotate(63 0 0)' style='transform-origin:center'%3E%3Cg transform='rotate(-124.8 0 0)' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%23000' href='%23a' transform='rotate(7.8 0 0) scale(1.078)'/%3E%3Cuse stroke='%23010208' href='%23a' transform='rotate(15.6 0 0) scale(1.156)'/%3E%3Cuse stroke='%2302040f' href='%23a' transform='rotate(23.4 0 0) scale(1.234)'/%3E%3Cuse stroke='%23030617' href='%23a' transform='rotate(31.2 0 0) scale(1.312)'/%3E%3Cuse stroke='%2304081f' href='%23a' transform='rotate(39 0 0) scale(1.39)'/%3E%3Cuse stroke='%23050a26' href='%23a' transform='rotate(46.8 0 0) scale(1.468)'/%3E%3Cuse stroke='%23060c2e' href='%23a' transform='rotate(54.6 0 0) scale(1.546)'/%3E%3Cuse stroke='%23070e36' href='%23a' transform='rotate(62.4 0 0) scale(1.624)'/%3E%3Cuse stroke='%2309103d' href='%23a' transform='rotate(70.2 0 0) scale(1.702)'/%3E%3Cuse stroke='%230a1245' href='%23a' transform='rotate(78 0 0) scale(1.78)'/%3E%3Cuse stroke='%230b144d' href='%23a' transform='rotate(85.8 0 0) scale(1.858)'/%3E%3Cuse stroke='%230c1654' href='%23a' transform='rotate(93.6 0 0) scale(1.936)'/%3E%3Cuse stroke='%230d185c' href='%23a' transform='rotate(101.4 0 0) scale(2.014)'/%3E%3Cuse stroke='%230e1a64' href='%23a' transform='rotate(109.2 0 0) scale(2.092)'/%3E%3Cuse stroke='%230f1c6b' href='%23a' transform='rotate(117 0 0) scale(2.17)'/%3E%3Cuse stroke='%23101E73' href='%23a' transform='rotate(124.8 0 0) scale(2.248)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
+    background-attachment:scroll;
     background-size: cover;
     border-radius: .7rem;
     color: #F2F2F2;
     transition: all 1s;
 }
 .tarjeta:hover{
-    box-shadow: 9px 3px 19px 6px rgba(94,136,191,0.75);
--webkit-box-shadow: 9px 3px 19px 6px rgba(94,136,191,0.75);
--moz-box-shadow: 9px 3px 19px 6px rgba(94,136,191,0.75);
+    box-shadow: 9px 3px 19px 6px #426a9ebb;
+-webkit-box-shadow: 9px 3px 19px 6px #426a9ebb;
+-moz-box-shadow: 9px 3px 19px 6px #426a9ebb;
 }
 .imagen{
     border-radius: .5rem;
