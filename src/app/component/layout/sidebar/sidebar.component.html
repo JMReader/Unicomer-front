@@ -7,13 +7,13 @@
         
            
         
-      <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
-            <i class="fa-solid fa-house-user"></i>
-          Home
+      <li class="nav-item" *ngFor="let opcion of opcioness">
+        <a href="{{opcion.url}}" class="nav-link text-white" aria-current="page">
+            <i class="fa-solid fa-{{opcion.icon}}"></i>
+          {{opcion.texto}}
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a href="#" class="nav-link text-white">
             <i class="fa-solid fa-wallet"></i>
           Tarjetas
@@ -54,7 +54,7 @@
             <i class="fa-solid fa-right-from-bracket"></i>
           Cerrar Sesion
         </a>
-      </li>
+      </li> -->
     </ul>
     
 

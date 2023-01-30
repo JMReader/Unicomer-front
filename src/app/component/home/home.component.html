@@ -24,7 +24,7 @@
         </div>
       </div>
     </nav>
-    <div  class="tarjetas col-12">
+    <div  class="tarjetas py-3 my-2 col-12">
       <div *ngFor="let tarjeta of tarjetas" class="tarjeta mx-4 py-4 px-3">
         <div class="tarjeta-top">
           <div class="tarjeta-monto">
@@ -60,10 +60,10 @@
         </div>
       </div>
     </div>
-    <div class="mid-page">
-      <div class="balance col-5">
-        a
-      </div>
+    <div class="mid-page mx-2">
+      
+      <img class="imagen" height="350" src="https://chartio.com/assets/dfd59f/tutorials/charts/grouped-bar-charts/c1fde6017511bbef7ba9bb245a113c07f8ff32173a7c0d742a4e1eac1930a3c5/grouped-bar-example-1.png"  alt="">
+      
       <div class="table-responsive-md  transacciones col-md-9 col-sm-9 col-lg-5 py-2 m-2">
         <p class="h5 px-2">Ultimas Transacciones</p>
         <div class="table-responsive-md">
@@ -73,7 +73,7 @@
               <td class="table-tipo">
                 <i class="fa-solid fa-arrow-turn-up flecha"></i>
               </td>
-              <td class="table-de">Facundo Molina</td>
+              
               <td class="monto">${{trans.monto}}</td>
               <td class="fecha">{{trans.fecha}}</td>
               <td class="table-estado">{{trans.estado}}</td>
@@ -85,7 +85,6 @@
               <td class="table-tipo">
                 <i class="fa-solid fa-arrow-turn-down"></i>
               </td>
-              <td class="table-de">Facundo Molina</td>
               <td class="monto">${{trans.monto}}</td>
               <td class="fecha">{{trans.fecha}}</td>
               <td  class="table-estado">{{trans.estado}}</td>

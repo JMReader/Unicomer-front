@@ -39,6 +39,7 @@ main{
 .tarjetas{
     display: flex;
     overflow-x: scroll;
+
 }
 .tarjetas::-webkit-scrollbar
 {
@@ -67,6 +68,17 @@ main{
     background-size: cover;
     border-radius: .7rem;
     color: #F2F2F2;
+    transition: all 1s;
+}
+.tarjeta:hover{
+    box-shadow: 9px 3px 19px 6px rgba(94,136,191,0.75);
+-webkit-box-shadow: 9px 3px 19px 6px rgba(94,136,191,0.75);
+-moz-box-shadow: 9px 3px 19px 6px rgba(94,136,191,0.75);
+}
+.imagen{
+    border-radius: .5rem;
+    height: 20rem;
+    
 }
 .tarjeta-monto{
     font-size: small;
@@ -94,7 +106,6 @@ main{
     font-size: larger;
 }
 .balance{
-    background-color: #F2F2F2;
     height: 300px;
 }
 
@@ -123,6 +134,7 @@ main{
 td{
     text-align: center;
 }
+
 @media (max-width: 640px){
     main{
         height: auto;
@@ -144,9 +156,14 @@ td{
     .navbar-options{
         width: auto;
     }
-  
+    .imagen{
+        height: 8rem;
+    }
  }
  @media (max-width: 995px){
+    .imagen{
+        height: 12rem;
+    }
     main{
         height: auto;
     }

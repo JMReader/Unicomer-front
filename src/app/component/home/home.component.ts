@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GoogleChartInterface, GoogleChartType } from 'ng2-google-charts';
 import { Tarjeta } from 'src/app/models/tarjeta';
 import { Transaccion } from 'src/app/models/transaccion';
 import { TarjetasService } from 'src/app/services/tarjetas.service';
@@ -9,14 +10,17 @@ import { TarjetasService } from 'src/app/services/tarjetas.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   tarjetas!: Tarjeta[];
   TransEnviadas !: Transaccion[];
   TransRecibidas !: Transaccion[];
   userName= sessionStorage.getItem('nombre');
+  DIA_EN_MILISEGUNDOS = 24 * 60 * 60 * 1000;
   constructor(private tarjetasS: TarjetasService) {
     
     this.traertarjetas();
     this.traertranss();
+
    }
 
    async traertarjetas(){
@@ -37,6 +41,10 @@ export class HomeComponent implements OnInit {
       }
     );
    }
+
+
+   
+
 
   ngOnInit(): void {
     

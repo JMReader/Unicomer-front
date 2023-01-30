@@ -22,5 +22,16 @@ export class LoginService {
     console.log(body);
     return this._http.post(this.hostBase + 'login', body, httpOption);
   }
+
+
+  public obtenerMenu(): Observable<any> {
+    const httpOption = {
+      headers: new HttpHeaders({
+        'access-control-allow-origin': 'http://localhost:4200',
+        'Content-Type': 'application/json'
+      })
+    }   
+    return this._http.get("http://localhost:3000/menu/completo?idMenu=63d79705358afad26abafe69", httpOption);
+  }
   
 }
