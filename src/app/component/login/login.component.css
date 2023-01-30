@@ -9,6 +9,12 @@ main{
 h3 b {
     color: #164c79;
 }
+h4 b {
+    color: #84a3fe;
+}
+.welcome-responsive{
+    width: 100%;
+}
 .cont{
     position: relative;
     background-color: #164d79e3;
@@ -42,6 +48,7 @@ h3 b {
     border: none;
     border-bottom: 2px solid rgb(255, 255, 255);
     background: none;
+    color: aliceblue;
 }
 
 .btn-log{
@@ -60,6 +67,8 @@ h3 b {
     cursor: crosshair
 }
 #teclado{
+    transition: opacity 0.5s ease-in-out;
+    transition: all 0.7s;
     position: absolute;
     bottom: 5px;
 }
@@ -69,6 +78,7 @@ h3 b {
     background-color: #cf3d4e;
 }
 .numberpad{
+    transition: opacity 0.5s ease-in-out;
     border-radius: 0.5rem;
     position: absolute;
     bottom: 12px;
@@ -82,7 +92,7 @@ h3 b {
     align-items: center;
     justify-content: space-between;
     justify-items: center;
-
+    transition: all 0.7s;
 }
 .numberpad div, .numberpad button{
     border: 3px solid #1f4363;;
@@ -100,3 +110,17 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=number] { -moz-appearance:textfield; }
+.alert{
+    background-color: #1F3140;
+    color: aliceblue;
+}
+
+/*responsive part*/
+@media (max-width: 991px){
+    #loginForm{
+        height: 100%;
+
+    }
+    
+     
+    }

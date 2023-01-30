@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { ActivatedRoute, Router } from '@angular/router';
+import { stringify } from 'querystring';
 import Keyboard from "simple-keyboard";
+import { LoginService } from 'src/app/services/login.service';
 
 
 @Component({
@@ -8,17 +12,37 @@ import Keyboard from "simple-keyboard";
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+
+
 export class LoginComponent implements OnInit {
   v: number= 0;
-  dni ="";
+  cont =0
+  dni !:number;
   tipodni="";
-  clave = 0;
+  clave = "";
   value = "";
   keyboard!: Keyboard;
   visibleKeyboard: boolean = false;
   visiblenumberpad:boolean = false;
+  badcredentials: boolean = false;
+  LoginForm:FormGroup;
 
-  constructor() { }
+  constructor( public fb: FormBuilder,
+     private Slogin: LoginService,
+     private router: Router ) { 
+    this.LoginForm=this.fb.group({
+      dni:[0,[Validators.required, Validators.min(10000000)]],
+      tipoDni:['',[Validators.required]],
+      password:['',[Validators.required, Validators.minLength(6)]],
+    });
+
+
+  }
+
+
+
+
 
   ngOnInit(): void {
   }
@@ -95,6 +119,34 @@ export class LoginComponent implements OnInit {
 
  console.log(this.visibleKeyboard);
   }
+  
+  numberpadElegir(numero:number){
+    if(this.cont==0){
+      this.dni=numero;
+      this.cont++;
+    }else{
+      this.dni=(this.dni*10)+numero
+    }
+    console.log(this.dni);
+  }
+  numberpadBorrar(){
+    this.dni=0;
+  }
 
+  Login(){
+    this.Slogin.login( String(this.LoginForm.value.dni), this.LoginForm.value.password).subscribe(result =>{
+      var user = result.user;
+      if(result.status ==1){
+        console.log("a");
+      sessionStorage.setItem("_id", user._id);
+      sessionStorage.setItem("dni", user.dni);
+      this.router.navigateByUrl('home');
+    }else{
+      this.badcredentials=true;
+    }
+      
+    });
+
+  }
 
 }
