@@ -33,5 +33,10 @@ export class LoginService {
     }   
     return this._http.get("http://localhost:3000/menu/completo?idMenu=63d79705358afad26abafe69", httpOption);
   }
-  
+  public userLogged() {
+    console.log("usuario");
+    var usuario = sessionStorage.getItem("username");
+    console.log("usuario");
+    return usuario;
+  }
 }

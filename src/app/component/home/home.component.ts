@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GoogleChartInterface, GoogleChartType } from 'ng2-google-charts';
 import { Tarjeta } from 'src/app/models/tarjeta';
 import { Transaccion } from 'src/app/models/transaccion';
+import { LoginService } from 'src/app/services/login.service';
 import { TarjetasService } from 'src/app/services/tarjetas.service';
 
 @Component({
@@ -16,12 +18,23 @@ export class HomeComponent implements OnInit {
   TransRecibidas !: Transaccion[];
   userName= sessionStorage.getItem('nombre');
   DIA_EN_MILISEGUNDOS = 24 * 60 * 60 * 1000;
-  constructor(private tarjetasS: TarjetasService) {
+  constructor(private tarjetasS: TarjetasService, private loginservice:LoginService,private router: Router) {
+    
+    if(sessionStorage.getItem("nombre")==null){
+      console.log('No estás logueado');
+        this.router.navigate(['/']);
+    }
     
     this.traertarjetas();
     this.traertranss();
 
    }
+   
+
+
+
+
+
 
    async traertarjetas(){
     this.tarjetasS.getTarjetas().subscribe(
@@ -47,6 +60,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+  
     
   }
 
